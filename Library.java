@@ -26,4 +26,14 @@ public class Library {
         }
         return null;
     }
+
+    public ArrayList<Book> searchByAuthor(String author) {
+        ArrayList<Book> foundBooks = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getAuthor().equalsIgnoreCase(author)) {
+                foundBooks.add(book);
+            }
+        }
+        return foundBooks;
+    }
 }
