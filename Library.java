@@ -18,9 +18,12 @@ public class Library {
         books.remove(book);
     }
 
-    public String searchByTitle(String title){
-        if (books.contains(title)){
-            return ;
+    public Book searchByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return book;
+            }
         }
+        return null;
     }
 }
